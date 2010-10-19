@@ -10,10 +10,13 @@ import foobar.canvastest.drawing.Drawable;
  * code in its own class. It hides all that boilerplate code, and gives the added
  * bonus of being able to switch out the scene being drawn while reusing the same view.
  * 
- * To make your own scene, create a new class that implements Drawable. Then, call 
- * MySurfaceView.setScene(new YourSceneClass());
- * You can do this, for example, when a button is clicked, or when the surface is created
- * by MainCanvasActivity.
+ * To make your own scene, create a new class that implements Drawable. Do what you need
+ * to in the draw() method to produce your image. To put your picture or animation on
+ * to the screen, call 
+ * yourMySurfaceViewInstance.setScene(new YourSceneClass());
+ * 
+ * You can do this, for example, when a button is clicked, or, for simplicity, when the 
+ * surface is created by MainCanvasActivity.
  */
 public class ExampleScene implements Drawable {
 	//A few "paint brushes" to draw with
@@ -21,6 +24,9 @@ public class ExampleScene implements Drawable {
 	private Paint mPaintText = new Paint();
 	private Paint mPaintBg = new Paint();
 
+	/**
+	 * Create the drawing.
+	 */
 	public void draw(Canvas c) {
 		//Save the basic matrix state. This is the state of all rotations, translations, scale operations, etc.
 		c.save();

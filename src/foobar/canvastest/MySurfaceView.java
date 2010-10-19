@@ -7,6 +7,8 @@ import android.view.SurfaceView;
 import foobar.canvastest.drawing.Drawable;
 
 /**
+ * An on-screen UI element that contains the Canvas that we draw on
+ * 
  * Created using this guide:
  * http://developer.android.com/guide/topics/graphics/index.html#on-surfaceview
  * 
