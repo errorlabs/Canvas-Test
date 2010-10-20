@@ -1,0 +1,17 @@
+# Canvas Test
+
+This application is for messing around with Android's Canvas class. It doesn't do anything useful unless you're a programmer who wants to play around with Canvas.
+
+The software is provided with no warrantee of any kind, and may not work for you. It is provided as is. The code is provided under the Apache 2.0 License.
+
+## Usage
+To create a new drawing: 
+1. Create a new class that implements the interface foobar.canvastest.drawing.Drawable. This class represents a whole scene\drawing. To keep things neat, you should place this class in the package foobar.canvastest.drawing.scenes.
+2. Place all of your drawing code in the Draw(Canvas) method of this class.
+3. Tell the application to use this new class for drawing. One way to do that is to put this code in MainCanvasActivity.onCreate(). Assuming your new scene class is called YourScene
+
+    ViewGroup containerView = (ViewGroup)findViewById(R.id.containerView);
+    mSurfaceView = new MySurfaceView(this, new YourScene());
+    
+    containerView.addView(mSurfaceView);
+
