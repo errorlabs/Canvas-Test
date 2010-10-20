@@ -15,3 +15,43 @@ To create a new drawing:
     
     containerView.addView(mSurfaceView);
 
+## Project Setup
+Install Eclipse, the Android SDK, and Git. Follow the instructions provided by those software projects.
+
+To set up your project:
+
+cd /path/to/your/folder
+git clone git://github.com/errorlabs/Canvas-Test.git
+mkdir workspace
+
+Open Eclipse and choose the workspace folder you just created for your workspace.
+Click the Arrow to go to the workbench.
+
+To set up the Android SDK for this project:
+In the menu, go to Eclipse->Preferences. Go to the Android section.
+Give it the location of your Android SDK folder. Give it a minute to figure things out, then click Ok.
+
+To import the code into the workspace:
+In the menu, go to File->Import
+In the dialog, choose General->"Existing Projects Into Workspace". Click Next
+Under Select Root Directory, browse to the Canvas-Test folder that was created when you performed git-clone. Do not check "Copy Projects into Workspace", as we want the source code to stay where it is. Click Finish.
+The code will now be in your workspace.
+
+To build for the first time:
+When you first start out, you will probably have build errors. Here is how you fix them.
+Right-click on the "CanvasTest" project in the Package Explorer. Select "Android Tools"->"Fix Project Properties"
+In the menu, click on Project->Clean.
+Your errors should go away at this point.
+
+To Run:
+Save your work. By default, saving will also compile your code in Eclipse.
+In the Menu, choose "Run->Run Configurations".
+Choose "Android Application"
+Click on the "New" button. This is the button with the plus sign on it.
+The name of the run configuration is New_configuration. Change it if you like.
+Click "Browse..." to choose a project. Select CanvasTest.
+Click Apply. Click Run.
+
+You may need create an Android Emulator if you havn't done so already. The project will run in an emulator if you try to run it when no phone is plugged in.
+
+Now that your run configuration is set up, you can run New_configuration any time by using the Toolbar icon.
